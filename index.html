@@ -20,11 +20,20 @@
 
 <header class="header">
   <div class="header-content">
+    
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectoeducativo.html">Proyecto Educativo</a></li>
+      </ul>
+    </nav>
+
     <img src="image10.jpg" alt="Imagen de portada" class="header-img">
-        <h1 class="Titulo">Portafolio de Aprendizaje</h1>
+    <h1 class="Titulo">Portafolio de Aprendizaje</h1>
     <p>Terapia Física y Rehabilitación | Universidad de Montemorelos</p>
   </div>
 </header>
+
 
 
   <section class="intro-bio-grid">
@@ -136,16 +145,49 @@
   <div class="slider">
     <button class="btn prev">‹</button>
 
-    <div class="slider-track" id="sliderTrack">
-      <img src="image6.jpg" alt="Evidencia 6" onclick="abrirModal(this)">
-      <img src="image5.jpg" alt="Evidencia 5" onclick="abrirModal(this)">
-      <img src="image13.png" alt="Evidencia 6" onclick="abrirModal(this)">
-      <img src="image15.jpg" alt="Evidencia 7" onclick="abrirModal(this)">
-      <video src="video2.mp4" controls muted loop onclick="abrirModal(this)"></video>
-      <img src="image16.jpg" alt="Evidencia 8" onclick="abrirModal(this)">
-      <img src="image17.jpg" alt="Evidencia 9" onclick="abrirModal(this)">
-      <video src="video1.mp4" controls muted loop onclick="abrirModal(this)"></video>
-    </div>
+<div class="slider-track" id="sliderTrack">
+
+  <div class="item">
+    <img src="image6.jpg" alt="Evidencia 6" onclick="abrirModal(this)">
+    <p>Voleibol</p>
+  </div>
+
+  <div class="item">
+    <img src="image5.jpg" alt="Evidencia 5" onclick="abrirModal(this)">
+    <p>Guitarra</p>
+  </div>
+
+  <div class="item">
+    <img src="image13.png" alt="Evidencia 6" onclick="abrirModal(this)">
+    <p>Clarinete</p>
+  </div>
+
+  <div class="item">
+    <img src="image15.jpg" alt="Evidencia 7" onclick="abrirModal(this)">
+    <p>Fútbol</p>
+  </div>
+
+  <div class="item">
+    <video src="video2.mp4" muted loop controls onclick="abrirModal(this)"></video>
+    <p>Entrenamiento</p>
+  </div>
+
+  <div class="item">
+    <img src="image16.jpg" alt="Evidencia 8" onclick="abrirModal(this)">
+    <p>Actividad física</p>
+  </div>
+
+  <div class="item">
+    <img src="image17.jpg" alt="Evidencia 9" onclick="abrirModal(this)">
+    <p>Deporte</p>
+  </div>
+
+  <div class="item">
+    <video src="video1.mp4" muted loop controls onclick="abrirModal(this)"></video>
+    <p>Atletismo / Correr</p>
+  </div>
+
+</div>
 
     <button class="btn next">›</button>
   </div>

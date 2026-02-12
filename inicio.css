@@ -1,4 +1,3 @@
-/* Reset + Variables con vino y rojo oscuro como protagonistas */
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +5,8 @@
 }
 
 :root {
-  --vino: #4a0e0e;             /* Vino oscuro principal */
-  --rojo-oscuro: #7f1d1d;      /* Rojo oscuro intenso */
+  --vino: #4a0e0e;             
+  --rojo-oscuro: #7f1d1d;      
   --vino-light: #6b1e1e;
   --rojo-light: #991b1b;
   --text: #1a0f0f;
@@ -27,9 +26,9 @@ body {
   line-height: 1.75;
 }
 
-/* Header - texto por encima de la imagen, negrita, centrado */
+
 .header {
-  position: relative;           /* Esto ya lo tienes, déjalo */
+  position: relative;      
   height: 75vh;
   min-height: 580px;
   display: flex;
@@ -306,4 +305,49 @@ footer p {
   h2 { font-size: 2.3rem; }
   section { padding: 4.5rem 1.2rem; }
   .slider-track img, .slider-track video { flex: 0 0 280px; height: 210px; }
+}
+.menu {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 3;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.menu a:hover {
+  color: var(--vino);
+}
+.bio-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio-image img {
+  width: 100%;
+  max-width: 320px;   
+  height: auto;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .bio-image img {
+    max-width: 280px;
+  }
 }
