@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* =========================
-     MODAL IMAGEN / VIDEO
-  ========================== */
-
+  /* ── MODAL ── */
   window.abrirModal = function (elemento) {
     const modal = document.getElementById("modal");
     const modalImg = document.getElementById("imgGrande");
@@ -12,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!modal || !modalImg || !modalVideo) return;
 
     modal.style.display = "flex";
-
     modalImg.style.display = "none";
     modalVideo.style.display = "none";
     modalVideo.pause();
@@ -41,11 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modalVideo.currentTime = 0;
   };
 
-
-  /* =========================
-     SLIDER (SI EXISTE)
-  ========================== */
-
+  /* ── SLIDER ── */
   const track = document.getElementById("sliderTrack");
   const btnPrev = document.querySelector(".prev");
   const btnNext = document.querySelector(".next");
@@ -59,11 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const total = items.length;
 
       index += direccion;
-
       if (index < 0) index = 0;
       if (index > total - 1) index = total - 1;
 
-      const ancho = items[0].offsetWidth;
+      const gap = parseFloat(getComputedStyle(track).gap) || 0;
+      const ancho = items[0].offsetWidth + gap;
       track.style.transform = `translateX(-${index * ancho}px)`;
     }
 
@@ -77,4 +69,3 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
-
