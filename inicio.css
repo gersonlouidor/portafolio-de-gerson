@@ -502,6 +502,94 @@ footer p {
   color: var(--vino);
 }
 
+/* ── FIGURA ESTILO WIKIPEDIA ── */
+.wiki-figura {
+  margin: 2rem auto 0;
+  width: 200px;
+  border: 1px solid rgba(74,14,14,0.18);
+  border-radius: 8px;
+  background: #faf8f8;
+  padding: 6px;
+  display: block;
+}
+
+/* Cuando no hay imagen: muestra el placeholder visual */
+.wiki-img-placeholder {
+  position: relative;
+  width: 100%;
+  background: #f2eded;
+  border-radius: 5px;
+  overflow: hidden;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  border: 2px dashed rgba(74,14,14,0.2);
+  transition: var(--transition);
+}
+
+.wiki-img-placeholder:hover {
+  border-color: var(--vino);
+  background: #ede8e8;
+}
+
+.wiki-img-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.wiki-img-texto {
+  font-size: 0.72rem;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-light);
+  letter-spacing: 0.5px;
+}
+
+/* La imagen real: oculta si no tiene src */
+.wiki-img {
+  width: 100%;
+  height: auto;
+  display: none;          /* se muestra con JS cuando src tiene valor */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.wiki-img:hover {
+  opacity: 0.88;
+}
+
+/* Cuando la imagen SÍ tiene src, la mostramos y ocultamos el placeholder */
+.wiki-img-placeholder:has(.wiki-img[src]:not([src=""])) .wiki-img {
+  display: block;
+}
+
+.wiki-img-placeholder:has(.wiki-img[src]:not([src=""])) .wiki-img-icon,
+.wiki-img-placeholder:has(.wiki-img[src]:not([src=""])) .wiki-img-texto {
+  display: none;
+}
+
+/* Caption estilo Wikipedia */
+.wiki-caption {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.72rem;
+  color: var(--text-light);
+  line-height: 1.45;
+  text-align: center;
+  padding: 5px 4px 2px;
+  display: block;
+}
+
+/* Asegura que el float no rompa el layout de la card */
+.competencia-body::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .header { height: 55vh; min-height: 450px; }
@@ -523,6 +611,10 @@ footer p {
 
   .competencia-columnas {
     grid-template-columns: 1fr;
+  }
+
+  .wiki-figura {
+    width: 160px;
   }
 }
 
