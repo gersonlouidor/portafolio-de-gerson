@@ -552,7 +552,7 @@ footer p {
 .wiki-img {
   width: 100%;
   height: auto;
-  display: none;          /* se muestra con JS cuando src tiene valor */
+  display: none;
   border-radius: 5px;
   cursor: pointer;
   transition: var(--transition);
@@ -590,6 +590,20 @@ footer p {
   clear: both;
 }
 
+/* ── GRUPO DE FIGURAS EN FILA ── */
+.wiki-grupo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.wiki-grupo .wiki-figura {
+  margin: 0;
+  flex: 0 0 200px;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .header { height: 55vh; min-height: 450px; }
@@ -615,6 +629,10 @@ footer p {
 
   .wiki-figura {
     width: 160px;
+  }
+
+  .wiki-grupo .wiki-figura {
+    flex: 0 0 160px;
   }
 }
 
